@@ -1,0 +1,33 @@
+<div id="container">
+  <h1>Cookbook <i class="fa fa-plus"></i></h1>
+  <form class="form" action="/" method="post">
+    <input type="text" name="name" placeholder="New recipe name">
+    <textarea name="description" placeholder="Description"></textarea>
+    <input type="text" name="cooking_time" placeholder="Cooking time">
+    <input type="submit">
+  </form>
+</div>
+
+<div id="container">
+  <ul>
+    <% @recipes.each_with_index do |recipe, i| %>
+      <li class="recipe">
+        <span class="trash-icon-box">
+          <form class="delete-form">
+            <input class="hidden" type="text" name="id" value="<%= i %>">
+            <button class="delete-button" type="sumbit" formaction="/delete/" formmethod="get"><i class="fa fa-trash"></i></button>
+          </form>
+        </span>
+        <span class="recipe-title">
+          <%= recipe.name %>
+        </span>
+        <span class="cooking_time">
+          <%= recipe.cooking_time %>
+        </span>
+        <p class="description-box">
+          <%= recipe.description %>
+        </p>
+      </li>
+    <% end %>
+  </ul>
+</div>

@@ -1,0 +1,128 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background: #acb6e5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #86fde8, #acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+  background-color: #2980b9;
+  color: white;
+  margin: 0;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  background-color: white;
+  /*height: 40px;
+  line-height: 40px;*/
+  color: #666;
+  padding: 10px;
+}
+
+li:nth-child(2n) {
+  background-color: #f7f7f7;
+}
+
+
+li:hover span.trash-icon-box {
+  width: 50px;
+  opacity: 1.0;
+}
+
+input, textarea {
+  font-size: 18px;
+  background-color: #f7f7f7;
+  width: 100%;
+  padding: 13px 13px 13px 20px;
+  box-sizing: border-box;
+  color: #2980b9;
+}
+
+
+input:focus, textarea:focus {
+  background-color: #fff;
+  border: 3px solid #2980b9;
+  outline: none;
+}
+
+button.delete-button {
+  padding: 0;
+  background-color: #e74c3c;
+  height: 100%;
+  width: 100%;
+  border: none;
+  position: absolute;
+  left: 0px;
+}
+
+.completed {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.delete-form {
+  width: 50px;
+  height: 50px;
+}
+
+.fa-plus {
+  float: right;
+}
+
+.fa-trash {
+  position: absolute;
+  color: white;
+}
+
+.fa-heart {
+  color:#be1931;
+}
+
+.trash-icon-box {
+  height: 50px;
+  text-align: center;
+  color: white;
+  width: 0px;
+  display: inline-block;
+  transition: 0.2s linear;
+  opacity: 0;
+  position: relative;
+}
+
+.recipe-title {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.cooking_time {
+  float: right;
+}
+
+.hidden {
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+}
+
+#container {
+  width: 700px;
+  margin: 100px auto;
+  background-color: #f7f7f7;
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+}
+
+#footer {
+  margin-top: 100px;
+  color: #666;
+  text-align: center;
+}
